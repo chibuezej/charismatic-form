@@ -213,7 +213,7 @@ function App() {
                   type="radio"
                   className="input"
                   name="room"
-                  value="siut"
+                  value="suit"
                   onChange={handleChange}
                   required
                 />
@@ -280,7 +280,7 @@ function App() {
           </div>
         );
         case 5:
-          const whatsappMessage = `Name: ${formData.name}, Province: ${formData.province}, Diocese: ${formData.diocese}, Gender: ${formData.gender}, Room Option: ${formData.room}, Paired Option: ${formData.pairing},`;
+          const whatsappMessage = `1. Name: ${formData.name}%0A2. Province: ${formData.province}%0A3. Diocese: ${formData.diocese}%0A4. Gender: ${formData.gender}%0A5. Room Option: ${formData.room}%0A6. Paired Option: ${formData.pairing}%0A`;
           const encodedMessage = encodeURIComponent(whatsappMessage);
           // Navigate to the WhatsApp URL with the encoded message
           window.location.href = `https://wa.me/08144704309?text=${encodedMessage}`; 
