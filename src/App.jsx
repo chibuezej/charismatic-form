@@ -289,7 +289,7 @@ function App() {
           
           const encodedMessage = encodeURIComponent(whatsappMessage);
           // Navigate to the WhatsApp URL with the encoded message
-          window.location.href = `https://wa.me/08144704309?text=${encodedMessage}`; 
+          window.location.href = `https://wa.me/+2348099558584?text=${encodedMessage}`; 
           return (
             <div className="submit">
               <h3 className="header">Submitted Information</h3>
