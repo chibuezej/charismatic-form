@@ -284,11 +284,11 @@ function App() {
           </div>
         );
         case 5:
-          const whatsappMessage = `1. Name: ${formData.name},
-          2. Province: ${formData.province},
-          3. Diocese: ${formData.diocese},
-          4. Gender: ${formData.gender},
-          5. Room Option: ${formData.room},
+          const whatsappMessage = `1. Name: ${formData.name},\n
+          2. Province: ${formData.province},\n
+          3. Diocese: ${formData.diocese},\n
+          4. Gender: ${formData.gender},\n
+          5. Room Option: ${formData.room},\n
           6. Paired Option: ${formData.pairing}.`;
          
           
