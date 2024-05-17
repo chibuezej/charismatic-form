@@ -262,10 +262,14 @@ function App() {
       case 4:
         return (
           <div className="submit">
-            <h3 className="sub-header">
-              Deadline for payment is 7th June 2024. Payment details: Account
-              number: 3095414831. Account name: Fernando M Ufot Bank: First Bank
+            
+            
+             <h3 className="sub-header">
+              Payment details: 
+              Account number: 3095414831. <br/>
+              Account name: Fernando M Ufot Bank: First Bank
             </h3>
+            <p style={{color: 'red', fontSize: '20px', fontWeight: 'bold'}}>Deadline for payment is 7th June 2024.</p>
             <div className="shadow">
               <p>
                 7.Please send your Prove of payment along with your filled form
@@ -280,7 +284,16 @@ function App() {
           </div>
         );
         case 5:
-          const whatsappMessage = `1. Name: ${formData.name}, 2. Province: ${formData.province}, 3. Diocese: ${formData.diocese}, 4. Gender: ${formData.gender}, 5. Room Option: ${formData.room}, 6. Paired Option: ${formData.pairing}.`;
+          // const whatsappMessage = `1. Name: ${formData.name}, 2. Province: ${formData.province}, 3. Diocese: ${formData.diocese}, 4. Gender: ${formData.gender}, 5. Room Option: ${formData.room}, 6. Paired Option: ${formData.pairing}.`;
+          const whatsappMessage = [
+            `1. Name: ${formData.name}<br>`,
+            `2. Province: ${formData.province}<br>`,
+            `3. Diocese: ${formData.diocese}<br>`,
+            `4. Gender: ${formData.gender}<br>`,
+            `5. Room Option: ${formData.room}<br>`,
+            `6. Paired Option: ${formData.pairing}.`
+          ];
+          
           const encodedMessage = encodeURIComponent(whatsappMessage);
           // Navigate to the WhatsApp URL with the encoded message
           window.location.href = `https://wa.me/08144704309?text=${encodedMessage}`; 
