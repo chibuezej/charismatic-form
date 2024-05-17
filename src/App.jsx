@@ -285,14 +285,17 @@ function App() {
         );
         case 5:
           // const whatsappMessage = `1. Name: ${formData.name}, 2. Province: ${formData.province}, 3. Diocese: ${formData.diocese}, 4. Gender: ${formData.gender}, 5. Room Option: ${formData.room}, 6. Paired Option: ${formData.pairing}.`;
-          const whatsappMessage = [
-            `1. Name: ${formData.name}<br>`,
-            `2. Province: ${formData.province}<br>`,
-            `3. Diocese: ${formData.diocese}<br>`,
-            `4. Gender: ${formData.gender}<br>`,
-            `5. Room Option: ${formData.room}<br>`,
-            `6. Paired Option: ${formData.pairing}.`
-          ];
+          const whatsappMessage = (
+            <>
+              <div>1. Name: {formData.name}</div>
+              <div style={{ paddingTop: "10px" }}>2. Province: {formData.province}</div>
+              <div style={{ paddingTop: "10px" }}>3. Diocese: {formData.diocese}</div>
+              <div style={{ paddingTop: "10px" }}>4. Gender: {formData.gender}</div>
+              <div style={{ paddingTop: "10px" }}>5. Room Option: {formData.room}</div>
+              <div style={{ paddingTop: "10px" }}>6. Paired Option: {formData.pairing}</div>
+            </>
+          );
+          
           
           const encodedMessage = encodeURIComponent(whatsappMessage);
           // Navigate to the WhatsApp URL with the encoded message
