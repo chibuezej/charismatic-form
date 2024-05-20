@@ -84,7 +84,7 @@ function App() {
           return false;
         }
         break;
-        case 4:
+        case 5:
           if (formData.amount === ''){
             toast.error("Tell us the amount you paid");
             return false;
@@ -266,23 +266,7 @@ function App() {
             </div>
           </div>
         );
-        case 4: 
-        return(
-        <div className="box-shadow">
-              <h3 className="text">
-                <span className="span">1</span>
-                Amount paid
-              </h3>
-              <input
-                type="number"
-                className="input"
-                name="amount"
-                value={formData.amount}
-                onChange={handleChange}
-              />
-            </div>
-        )
-      case 5:
+      case 4:
         return (
           <div className="submit">
             
@@ -306,6 +290,22 @@ function App() {
             </div>
           </div>
         );
+                case 5: 
+        return(
+        <div className="box-shadow">
+              <h3 className="text">
+                <span className="span">1</span>
+                Amount paid
+              </h3>
+              <input
+                type="number"
+                className="input"
+                name="amount"
+                value={formData.amount}
+                onChange={handleChange}
+              />
+            </div>
+        )
         case 6:
           const whatsappMessage = `1. Name: ${formData.name},\n2. Province: ${formData.province},\n3. Diocese: ${formData.diocese},\n4. Gender: ${formData.gender},\n5. Room Option: ${formData.room},\n6. Paired Option: ${formData.pairing}.\n7. Amount paid: ${formData.amount}`;
          
@@ -347,7 +347,7 @@ function App() {
             </button>
           )}
           <button className="button" onClick={handleNext}>
-            {step !== 4 ? "Next" : "Submit"}
+            {step !== 5 ? "Next" : "Submit"}
           </button>
         </div>
       </form>
