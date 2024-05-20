@@ -271,7 +271,7 @@ function App() {
         <div className="box-shadow">
               <h3 className="text">
                 <span className="span">1</span>
-                Amount to be paid
+                Amount paid
               </h3>
               <input
                 type="number"
