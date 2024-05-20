@@ -16,6 +16,7 @@ function App() {
     gender: "",
     room: "",
     pairing: "",
+    amount: "",
   });
   const [error, setError] = useState("");
   
@@ -83,6 +84,12 @@ function App() {
           return false;
         }
         break;
+        case 4:
+          if (formData.amount === ''){
+            toast.error("Tell us the amount you paid");
+            return false;
+          }
+          break;
       default:
         break;
     }
@@ -259,7 +266,23 @@ function App() {
             </div>
           </div>
         );
-      case 4:
+        case 4: 
+        return(
+        <div className="box-shadow">
+              <h3 className="text">
+                <span className="span">1</span>
+                Amount to be paid
+              </h3>
+              <input
+                type="number"
+                className="input"
+                name="amount"
+                value={formData.amount}
+                onChange={handleChange}
+              />
+            </div>
+        )
+      case 5:
         return (
           <div className="submit">
             
@@ -283,8 +306,8 @@ function App() {
             </div>
           </div>
         );
-        case 5:
-          const whatsappMessage = `1. Name: ${formData.name},\n2. Province: ${formData.province},\n3. Diocese: ${formData.diocese},\n4. Gender: ${formData.gender},\n5. Room Option: ${formData.room},\n6. Paired Option: ${formData.pairing}.`;
+        case 6:
+          const whatsappMessage = `1. Name: ${formData.name},\n2. Province: ${formData.province},\n3. Diocese: ${formData.diocese},\n4. Gender: ${formData.gender},\n5. Room Option: ${formData.room},\n6. Paired Option: ${formData.pairing}.\n7. Amount paid: ${formData.amount}`;
          
           
           const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -299,6 +322,7 @@ function App() {
               <p className="sub-header">Gender: {formData.gender}</p>
               <p className="sub-header">Room Option: {formData.room}</p>
               <p className="sub-header">Paired Option: {formData.pairing}</p>
+              <p className="sub-header">Amount Paid: {formData.amount}</p>
            <h1 style={{color: 'green', fontSize: '19px', fontWeight:'bold'}}>Data Added Successfully</h1>
               <p style={{color: 'red', fontSize: '15px', fontWeight:'bold'}}>Redirecting to WhatsApp...</p>
             </div>
