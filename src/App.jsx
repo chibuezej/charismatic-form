@@ -276,7 +276,7 @@ function App() {
               Account number: 3095414831. <br/>
               Account name: Fernando M Ufot Bank: First Bank
             </h3>
-            <p style={{color: 'red', fontSize: '20px', fontWeight: 'bold'}}>Deadline for payment is 7th June 2024.</p>
+            <p style={{color: 'red', fontSize: '20px', fontWeight: 'bold'}}>Deadline for payment is 10th June 2024.</p>
             <div className="shadow">
               <p>
                 7.Please send your Prove of payment along with your filled form
